@@ -1,72 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    <script src="./assets/js/script.js" defer></script>
 </head>
+
 <body>
-    <h1>Weather Dashboard</h1>
+    <header>
+        <h1>Weather Dashboard</h1>
+    </header>
+
     <div class="container">
-        <div class="weather-input">
+        <div id="weather-input">
             <h3>Enter a City Name</h3>
-            <input class="city-input" type="text" placeholder="E.g., New York, London, Tokyo">
-            <button class="search-btn">Search</button>
-            <div class="separator"></div>
-            <button class="location-btn">Use Current Location</button>
+            <form id="search-form">
+                <input type="text" id="city-input" placeholder="Enter a city">
+                <button type="submit">Search</button>
+                <div class="seperator"></div>
+                <aside id="search-history"></aside>
+            </form>
         </div>
-        <div class="weather-data">
-            <div class="current-weather">
+        <main>
+            <div class="weather-data" id="current-weather">
                 <div class="details">
-                    <h2>Atlanta (10-15-2023)</h2>
-                    <h4>Temperature: 61°F</h4>
-                    <h4>Wind: 10 MPH</h4>
-                    <h4>Humidity: 67%</h4>
-                </div>
-                <div class="icon">
-                    <img src="https://openweathermap.org/img/wn/10d@4x.png" alt="weather-icon">
-                    <h4>Moderate Rain</h4>
+                    <!-- Display current weather information here -->
+                    <h2>___________ ( ________ )</h2>
+                    <h4>Temperature: __°F</h4>
+                    <h4>Wind: __MPH</h4>
+                    <h4>Humidity: __%</h4>
                 </div>
             </div>
-            <div class="days-forecast">
+            <div class="days-forecast" id="forecast">
+                <!-- Display 5-day forecast here -->
                 <h2>5-Day Forecast</h2>
                 <ul class="weather-cards">
                     <li class="card">
                         <h3>(___________)</h3>
                         <h4>Temperature: __°F</h4>
                         <h4>Wind: __MPH</h4>
-                        <h4>Humidity: __%</h4>    
+                        <h4>Humidity: __%</h4>
                     </li>
                     <li class="card">
                         <h3>(___________)</h3>
                         <h4>Temperature: __°F</h4>
                         <h4>Wind: __MPH</h4>
-                        <h4>Humidity: __%</h4>    
-                    </li> 
+                        <h4>Humidity: __%</h4>
+                    </li>
                     <li class="card">
                         <h3>(___________)</h3>
                         <h4>Temperature: __°F</h4>
                         <h4>Wind: __MPH</h4>
-                        <h4>Humidity: __%</h4>    
+                        <h4>Humidity: __%</h4>
                     </li>
                     <li class="card">
                         <h3>(___________)</h3>
                         <h4>Temperature: __°F</h4>
                         <h4>Wind: ___MPH</h4>
-                        <h4>Humidity: ___%</h4>    
-                    </li> 
+                        <h4>Humidity: ___%</h4>
+                    </li>
                     <li class="card">
                         <h3>(___________)</h3>
                         <h4>Temperature: __°F</h4>
                         <h4>Wind: ___MPH</h4>
-                        <h4>Humidity: ___%</h4>    
-                    </li> 
+                        <h4>Humidity: ___%</h4>
+                    </li>
                 </ul>
             </div>
-        </div>
+        </main>
     </div>
-    
+
+
+    <!-- Display search history here -->
+    </aside>
+    <script src="./assets/js/script.js" defer></script>
 </body>
+
 </html>
